@@ -1,0 +1,24 @@
+
+.confetti-container {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+    opacity: 0.8;
+    animation: fall linear infinite;
+    transform-origin: left top;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
